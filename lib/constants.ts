@@ -49,10 +49,6 @@ export const NAVIGATION = [
     route: '/stage/c'
   },
   {
-    name: 'Stage M',
-    route: '/stage/m'
-  },
-  {
     name: 'Stage E',
     route: '/stage/e'
   },
