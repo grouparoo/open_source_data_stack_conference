@@ -1,6 +1,17 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fvirtual-event-starter-kit&project-name=virtual-event-starter-kit&repository-name=virtual-event-starter-kit&demo-title=Virtual%20Event%20Starter%20Kit&demo-description=Jumpstart%20your%20virtual%20event%20and%20scale%20to%20any%20size%20with%20Next.js%20and%20Vercel.&demo-url=https%3A%2F%2Fdemo.vercel.events%2F&demo-image=https%3A%2F%2Fdemo.vercel.events%2Fdeploy.png&integration-ids=oac_I1h8Dm9Mf30VNb3xQ0hebYvS&external-id=%7B%22manifest%22%3A%20%22https%3A%2F%2Fraw.githubusercontent.com%2Fvercel%2Fvirtual-event-starter-kit%2Fmain%2Fdatocms.json%22%7D)
+# Open Source Data Stack Conference
 
-# [Virtual Event Starter Kit](https://vercel.com/virtual-event-starter-kit)
+## Get Started
+
+* This requires Node v12. This is not available on M1 macs without some [tricks](https://dev.to/courier/tips-and-tricks-to-setup-your-apple-m1-for-development-547g).
+
+* Install Yarn first with `npm install -g yarn`
+
+* cp .env.local.example .env.local
+
+* Update .env.local with our DatoCMS token.
+
+
+# [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
 ### Demo: https://demo.vercel.events
 
