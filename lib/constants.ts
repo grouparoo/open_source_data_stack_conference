@@ -21,9 +21,8 @@ export const BRAND_NAME = 'Open Source Data Stack';
 export const SITE_NAME_MULTILINE = ['Open Source', 'Data Stack'];
 export const SITE_NAME = 'Open Source Data Stack Conference';
 export const META_DESCRIPTION =
-  'TODO This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
-export const SITE_DESCRIPTION =
-  'TODO An interactive online experience by the community, free for everyone.';
+  'A week of talks about leading open source data solutions | Sept. 27 - Oct. 1';
+export const SITE_DESCRIPTION = 'A week of talks about leading open source data solutions.';
 export const DATE = 'Sept. 27 - Oct. 1';
 export const SHORT_DATE = 'Sept. 27 - Oct. 1 @ 10:00am PST';
 export const FULL_DATE = SHORT_DATE; // not used?
