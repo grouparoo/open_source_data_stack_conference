@@ -24,7 +24,7 @@ export const META_DESCRIPTION =
   'A week of talks about leading open source data solutions | Sept. 27 - Oct. 1';
 export const SITE_DESCRIPTION = 'A week of talks about leading open source data solutions.';
 export const DATE = 'Sept. 27 - Oct. 1';
-export const SHORT_DATE = 'Sept. 27 - Oct. 1 @ 10:00am PST';
+export const SHORT_DATE = 'Sept. 27 - Oct. 1 @ 10:00am PDT';
 export const FULL_DATE = SHORT_DATE; // not used?
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
@@ -39,16 +39,12 @@ export const REPO = 'https://github.com/grouparoo/open_source_data_stack_confere
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Stage A',
-    route: '/stage/a'
+    name: 'PDT | USA',
+    route: '/stage/pdt'
   },
   {
-    name: 'Stage C',
-    route: '/stage/c'
-  },
-  {
-    name: 'Stage E',
-    route: '/stage/e'
+    name: 'CET | Europe',
+    route: '/stage/cet'
   },
   {
     name: 'Schedule',
