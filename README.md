@@ -19,6 +19,7 @@
 - Store users in Redis
 - Change out the videos
 - Update jobs, expo, speakers, talks in DatoCMS
+- Github Oauth
 
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
