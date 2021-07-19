@@ -18,6 +18,7 @@
 - Add page for stack or add to homepage
 - Store users in Redis
 - Change out the videos
+- Update jobs, expo, speakers, talks in DatoCMS
 
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
