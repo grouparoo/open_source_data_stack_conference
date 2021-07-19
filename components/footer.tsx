@@ -20,17 +20,7 @@ import styles from './footer.module.css';
 import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@lib/constants';
 
 export function HostedByVercel() {
-  return (
-    <a
-      href="https://vercel.com"
-      className={cn(styles['footer-link'], styles['footer-logo'])}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div className={styles['secondary-text']}>Created by </div>
-      <VercelLogo color="white" />
-    </a>
-  );
+  return <div></div>;
 }
 
 export default function Footer() {
@@ -46,27 +36,33 @@ export default function Footer() {
           rights reserved.
         </div>
         <div className={styles['footer-center-group']}>
-          <p className={styles['footer-paragraph']}>
-            <a
-              href={REPO}
-              className={styles['footer-link']}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source Code
-            </a>
-          </p>
-          <div className={styles['footer-separator']} />
-          <p className={styles['footer-paragraph']}>
-            <a
-              href={CODE_OF_CONDUCT}
-              className={styles['footer-link']}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Code of Conduct
-            </a>
-          </p>
+          {(CODE_OF_CONDUCT || LEGAL_URL) && (
+            <p className={styles['footer-paragraph']}>
+              <a
+                href={REPO}
+                className={styles['footer-link']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source Code
+              </a>
+            </p>
+          )}
+          {CODE_OF_CONDUCT && (
+            <>
+              <div className={styles['footer-separator']} />
+              <p className={styles['footer-paragraph']}>
+                <a
+                  href={CODE_OF_CONDUCT}
+                  className={styles['footer-link']}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Code of Conduct
+                </a>
+              </p>
+            </>
+          )}
           {LEGAL_URL && (
             <>
               <div className={styles['footer-separator']} />

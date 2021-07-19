@@ -30,8 +30,8 @@
 .row {
   display: flex;
   flex-direction: column;
-  margin: 0 24px;
-  padding: var(--space-8x) 0 0;
+  margin-top: 24px;
+  padding: 0;
   border-bottom: 1px solid var(--accents-7);
   width: 100%;
 }
@@ -52,12 +52,14 @@
 .talks {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  flex-wrap: wrap;
   margin-top: 40px;
+  margin-left: 40px;
 }
 
 .talks > div {
   margin-right: 24px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 500px) {
@@ -69,7 +71,7 @@
   .row {
     margin: 0 var(--space-8x) 0 0;
     flex-direction: row;
-    padding: var(--space-8x) 0;
+    padding: var(--space-8x) 0 0 0;
   }
 
   .talks {

@@ -14,11 +14,24 @@
  * limitations under the License.
  */
 
-import cn from 'classnames';
-import styleUtils from './utils.module.css';
-import styles from './contact.module.css';
+import { Stage, Talk } from '@lib/types';
 
-export default function LearnMore() {
-  // copy here to learn more or put below the hero if necessary.
-  return <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}></div>;
+export function scheduleForStage(stage: Stage | undefined): Talk[] {
+  // Group talks by the time block
+  const schedule = stage?.schedule;
+  if (!schedule) {
+    return [];
+  }
+  const timeBlocks = schedule.reduce((allBlocks: any, talk) => {
+    allBlocks[new Date(talk.start).getTime()] = [...(allBlocks[talk.start] || []), talk];
+    return allBlocks;
+  }, {});
+  let out: Talk[] = [];
+
+  Object.keys(timeBlocks)
+    .sort()
+    .forEach(key => {
+      out = out.concat(timeBlocks[key]);
+    });
+  return out;
 }
