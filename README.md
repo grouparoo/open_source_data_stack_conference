@@ -16,6 +16,7 @@
 - Set logo in icon-logo.tsx
 - Update twitter-card.png
 - Add page for stack or add to homepage
+- Store users in Redis
 
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
