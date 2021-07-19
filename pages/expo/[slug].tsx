@@ -22,7 +22,7 @@ import Layout from '@components/layout';
 
 import { getAllSponsors } from '@lib/cms-api';
 import { Sponsor } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { META_DESCRIPTION, META_TITLE } from '@lib/constants';
 
 type Props = {
   sponsor: Sponsor;
@@ -30,7 +30,7 @@ type Props = {
 
 export default function SponsorPage({ sponsor }: Props) {
   const meta = {
-    title: 'Demo - Virtual Event Starter Kit',
+    title: META_TITLE,
     description: META_DESCRIPTION
   };
 
