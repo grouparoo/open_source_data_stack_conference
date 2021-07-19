@@ -31,10 +31,10 @@ export const COOKIE = 'user-id';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
-export const LEGAL_URL = null; // 'https://legalurl';
+export const LEGAL_URL = ''; // 'https://legalurl';
 export const COPYRIGHT_HOLDER = null;
 
-export const CODE_OF_CONDUCT = null; //'https://codeofconducturl';
+export const CODE_OF_CONDUCT = ''; //'https://codeofconducturl';
 export const REPO = 'https://github.com/grouparoo/open_source_data_stack_conference';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
