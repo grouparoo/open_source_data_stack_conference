@@ -2,14 +2,20 @@
 
 ## Get Started
 
-* This requires Node v12. This is not available on M1 macs without some [tricks](https://dev.to/courier/tips-and-tricks-to-setup-your-apple-m1-for-development-547g).
+- This requires Node v12. This is not available on M1 macs without some [tricks](https://dev.to/courier/tips-and-tricks-to-setup-your-apple-m1-for-development-547g).
 
-* Install Yarn first with `npm install -g yarn`
+- Install Yarn first with `npm install -g yarn`
 
-* cp .env.local.example .env.local
+- cp .env.local.example .env.local
 
-* Update .env.local with our DatoCMS token.
+- Update .env.local with the DatoCMS token.
 
+## TODO
+
+- Make a logo and update /public(apple|favicon*|icon*)
+- Set logo in icon-logo.tsx
+- Update twitter-card.png
+- Add page for stack or add to homepage
 
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
@@ -76,7 +82,7 @@ Environment variables determine which CMS to use. See [`lib/cms-api.ts`](lib/cms
 - [Contentful](lib/cms-providers/contentful.ts)
 - [Prismic](lib/cms-providers/prismic/index.ts) ([Instructions](lib/cms-providers/prismic/README.md))
 - [Sanity](https://create.sanity.io/?template=sanity-io%2Fsanity-template-nextjs-event-starter)
-- [Storyblok](lib/cms-providers/storyblok.ts) 
+- [Storyblok](lib/cms-providers/storyblok.ts)
   - Click the following link to create the space for this starter kit in Storyblok: [Create Event Space](https://app.storyblok.com/#!/build/101757)
 
 ### Constants
