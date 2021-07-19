@@ -59,6 +59,7 @@
 
 .talks > div {
   margin-right: 24px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 500px) {
