@@ -1,10 +1,10 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "description": "Fully customizable starter kit for your virtual event.",
-  "previewImage": "https://demo.vercel.events/twitter-card.png",
+  "name": "Open Source Data Stack Conference",
+  "description": "A week of talks about leading open source data solutions | Sept. 27 - Oct. 1",
+  "previewImage": "https://www.opensourcedatastack.com/twitter-card.png",
   "datocmsProjectId": "37685",
   "deploymentType": "vercel",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://demo.vercel.events/"
+  "livePreviewUrl": "https://www.openstackdatastack.com/"
 }

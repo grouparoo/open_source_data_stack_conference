@@ -23,7 +23,7 @@ import Header from '@components/header';
 
 import { getAllJobs } from '@lib/cms-api';
 import { Job } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { META_DESCRIPTION, META_TITLE } from '@lib/constants';
 
 type Props = {
   jobs: Job[];
@@ -31,7 +31,7 @@ type Props = {
 
 export default function Jobs({ jobs }: Props) {
   const meta = {
-    title: 'Career Fair - Virtual Event Starter Kit',
+    title: `Career Fair - ${META_TITLE}`,
     description: META_DESCRIPTION
   };
 

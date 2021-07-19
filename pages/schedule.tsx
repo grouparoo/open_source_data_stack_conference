@@ -23,7 +23,7 @@ import Header from '@components/header';
 
 import { getAllStages } from '@lib/cms-api';
 import { Stage } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { META_DESCRIPTION, META_TITLE } from '@lib/constants';
 
 type Props = {
   allStages: Stage[];
@@ -31,7 +31,7 @@ type Props = {
 
 export default function SchedulePage({ allStages }: Props) {
   const meta = {
-    title: 'Schedule - Virtual Event Starter Kit',
+    title: `Schedule - ${META_TITLE}`,
     description: META_DESCRIPTION
   };
 
