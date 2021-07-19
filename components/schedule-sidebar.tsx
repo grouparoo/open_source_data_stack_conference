@@ -21,6 +21,7 @@ import styles from './schedule-sidebar.module.css';
 import Select from './select';
 import TalkCard from './talk-card';
 import { SHORT_DATE } from '@lib/constants';
+import { scheduleForStage } from '@lib/schedule';
 
 type Props = {
   allStages: Stage[];
@@ -30,7 +31,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
   const router = useRouter();
   const [currentStageSlug, setCurrentStageSlug] = useState(router.query.slug);
   const currentStage = allStages.find((s: Stage) => s.slug === currentStageSlug);
-
+  const talks = scheduleForStage(currentStage);
   useEffect(() => {
     setCurrentStageSlug(router.query.slug);
   }, [router.query.slug]);
@@ -55,7 +56,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
         ))}
       </Select>
       <div className={styles.talks}>
-        {currentStage?.schedule.map(talk => (
+        {talks.map(talk => (
           <TalkCard key={[talk.title, talk.start, currentStage].join('|')} talk={talk} showTime />
         ))}
       </div>
