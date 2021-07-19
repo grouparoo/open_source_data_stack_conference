@@ -16,7 +16,7 @@
 
 export const SITE_URL = 'https://www.opensourcedatastack.com';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
-export const TWITTER_USER_NAME = 'TODO';
+export const TWITTER_USER_NAME = null; // 'twitterusername';
 export const BRAND_NAME = 'Open Source Data Stack';
 export const SITE_NAME_MULTILINE = ['Open Source', 'Data Stack'];
 export const SITE_NAME = 'Open Source Data Stack Conference';
