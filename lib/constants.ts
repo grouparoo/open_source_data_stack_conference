@@ -39,11 +39,11 @@ export const REPO = 'https://github.com/grouparoo/open_source_data_stack_confere
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'PDT | USA',
+    name: 'USA',
     route: '/stage/pdt'
   },
   {
-    name: 'CET | Europe',
+    name: 'Europe',
     route: '/stage/cet'
   },
   {
