@@ -24,7 +24,7 @@ export const META_DESCRIPTION =
   'A week of talks about leading open source data solutions | Sept. 27 - Oct. 1';
 export const SITE_DESCRIPTION = 'A week of talks about leading open source data solutions.';
 export const DATE = 'Sept. 27 - Oct. 1';
-export const SHORT_DATE = 'Sept. 27 - Oct. 1 @ 10:00am PDT';
+export const SHORT_DATE = 'Sept. 27 - Oct. 1';
 export const FULL_DATE = SHORT_DATE; // not used?
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
