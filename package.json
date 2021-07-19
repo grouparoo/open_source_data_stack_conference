@@ -4,7 +4,7 @@
   "private": true,
   "repository": "grouparoo/open_source_data_stack_conference",
   "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "homepage": "https://www.opensourcedatastack.com",
   "license": "Apache-2.0",
   "engines": {
     "node": "12.x"
