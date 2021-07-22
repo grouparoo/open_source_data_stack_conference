@@ -18,9 +18,16 @@ import Redis from 'ioredis';
 import crypto from 'crypto';
 
 const redis =
-  process.env.REDIS_URL && process.env.REDIS_EMAIL_TO_ID_SECRET
-    ? new Redis(process.env.REDIS_URL)
-    : undefined;
+  process.env.REDIS_URL && process.env.REDIS_EMAIL_TO_ID_SECRET ? getRedisClient() : undefined;
+
+export function getRedisClient(): Redis.Redis {
+  const url = process.env.REDIS_URL || '';
+  const protocol = url.split(':')[0].toLowerCase();
+  const options = {
+    tls: protocol === 'rediss' ? { rejectUnauthorized: false } : undefined
+  };
+  return new Redis(process.env.REDIS_URL, options);
+}
 
 export function emailToId(email: string) {
   if (process.env.REDIS_EMAIL_TO_ID_SECRET) {
