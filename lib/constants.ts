@@ -22,10 +22,10 @@ export const SITE_NAME_MULTILINE = ['Open Source', 'Data Stack'];
 export const SITE_NAME = 'Open Source Data Stack Conference';
 export const META_TITLE = SITE_NAME;
 export const META_DESCRIPTION =
-  'A week of talks about leading open source data solutions | Sept. 27 - Oct. 1';
-export const SITE_DESCRIPTION = 'A week of talks about leading open source data solutions.';
-export const DATE = 'Sept. 27 - Oct. 1';
-export const SHORT_DATE = 'Sept. 27 - Oct. 1';
+  'Building the modern stack with open source data solutions | Sept. 28 - 30';
+export const SITE_DESCRIPTION = 'Building the modern stack with open source data solutions.';
+export const DATE = 'Sept. 28 - 30';
+export const SHORT_DATE = 'Sept. 28 - 30';
 export const FULL_DATE = SHORT_DATE; // not used?
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
