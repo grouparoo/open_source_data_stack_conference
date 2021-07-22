@@ -18,7 +18,6 @@
 - Update twitter-card.png
 - Make a prettier stack picture
 - Add page for stack or add to homepage
-- Store users in Redis
 - Change out the videos
 - Update jobs, expo, speakers, talks in DatoCMS
 - Github Oauth
