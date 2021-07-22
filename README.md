@@ -16,6 +16,7 @@
 - Set logo (svg) in icon-logo.tsx
 - Make a better image of the stack for use on site
 - Update twitter-card.png
+- Make a prettier stack picture
 - Add page for stack or add to homepage
 - Store users in Redis
 - Change out the videos
