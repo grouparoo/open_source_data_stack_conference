@@ -12,8 +12,9 @@
 
 ## TODO
 
-- Make a logo and update /public(apple|favicon*|icon*)
-- Set logo in icon-logo.tsx
+- Make a logo and update /public/(apple|favicon*|icon*)
+- Set logo (svg) in icon-logo.tsx
+- Make a better image of the stack for use on site
 - Update twitter-card.png
 - Add page for stack or add to homepage
 - Store users in Redis
