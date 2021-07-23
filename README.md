@@ -8,7 +8,11 @@
 
 - cp .env.local.example .env.local
 
-- Update .env.local with the DatoCMS token.
+- Update .env.local
+
+  - Required: `DATOCMS_READ_ONLY_API_TOKEN`
+  - Test registration: `REDIS_URL` to local Redis and make up a token for `REDIS_EMAIL_TO_ID_SECRET`
+  - Test named ticket: `GITHUB_OAUTH_CLIENT_SECRET` to development Github OAuth app secret and `NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID` to the Client ID of the same app
 
 ## TODO
 
