@@ -16,7 +16,6 @@
 
 ## TODO
 
-- Make a logo and update /public/(apple|favicon*|icon*)
 - Set logo in Github OAuth App
 - Make a better image of the stack for use on site
 - Update twitter-card.png
