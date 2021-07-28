@@ -17,7 +17,6 @@
 ## TODO
 
 - Make a logo and update /public/(apple|favicon*|icon*)
-- Set logo (svg) in icon-logo.tsx
 - Set logo in Github OAuth App
 - Make a better image of the stack for use on site
 - Update twitter-card.png
