@@ -35,7 +35,7 @@ export const COOKIE = 'user-id';
 export const LEGAL_URL = ''; // 'https://legalurl';
 export const COPYRIGHT_HOLDER = null;
 
-export const CODE_OF_CONDUCT = ''; //'https://codeofconducturl';
+export const CODE_OF_CONDUCT = 'https://www.opensourcedatastack.com/OSDSConfCodeofConduct.html';
 export const REPO = 'https://github.com/grouparoo/open_source_data_stack_conference';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
