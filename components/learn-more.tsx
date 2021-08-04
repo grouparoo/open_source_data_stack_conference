@@ -17,8 +17,20 @@
 import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './contact.module.css';
+import { CODE_OF_CONDUCT } from '@lib/constants';
 
 export default function LearnMore() {
   // copy here to learn more or put below the hero if necessary.
-  return <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}></div>;
+  return (
+    <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
+      {CODE_OF_CONDUCT && (
+        <>
+          By registering, you agree to our
+          <a href={CODE_OF_CONDUCT} target="_blank" rel="noopener noreferrer">
+            terms and code of conduct.
+          </a>
+        </>
+      )}
+    </div>
+  );
 }

@@ -22,6 +22,7 @@ import LoadingDots from './loading-dots';
 import { register } from '@lib/user-api';
 import { SITE_DESCRIPTION } from '@lib/constants';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
+import { CODE_OF_CONDUCT } from '@lib/constants';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -120,6 +121,16 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
           </button>
         </div>
       </form>
+      <div className={cn(styles.code)}>
+        {CODE_OF_CONDUCT && (
+          <>
+            By joining, you agree to our{' '}
+            <a href={CODE_OF_CONDUCT} target="_blank" rel="noopener noreferrer">
+              terms and code of conduct.
+            </a>
+          </>
+        )}
+      </div>
     </div>
   );
 }

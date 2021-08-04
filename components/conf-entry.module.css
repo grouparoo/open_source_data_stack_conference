@@ -44,6 +44,15 @@
   max-width: 355px;
 }
 
+.code {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  text-align: center;
+  color: var(--secondary-color);
+  max-width: 700px;
+  margin-top: var(--space-4x);
+}
+
 @media (min-width: 768px) {
   .hero {
     font-size: 48px;
