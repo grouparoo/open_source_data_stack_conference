@@ -25,7 +25,7 @@ export default function LearnMore() {
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
       {CODE_OF_CONDUCT && (
         <>
-          By registering, you agree to our
+          By registering, you agree to our{' '}
           <a href={CODE_OF_CONDUCT} target="_blank" rel="noopener noreferrer">
             terms and code of conduct.
           </a>
