@@ -16,12 +16,12 @@
 
 ## TODO
 
-- Set logo in Github OAuth App
 - Make a better image of the stack for use on site
 - Update twitter-card.png
 - Add page for stack or add to homepage
-- Change out the videos
-- Update jobs, expo, speakers, talks in DatoCMS
+- Set videos for companies
+- Add jobs
+- Switch out videos for the talks
 
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
