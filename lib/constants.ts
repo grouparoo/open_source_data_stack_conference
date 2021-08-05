@@ -27,7 +27,7 @@ export const SITE_DESCRIPTION = 'Building the modern stack with open source data
 export const DATE = 'Sept. 28 - 30';
 export const SHORT_DATE = 'Sept. 28 - 30';
 export const FULL_DATE = SHORT_DATE; // not used?
-export const TWEET_TEXT = META_DESCRIPTION;
+export const TWEET_TEXT = `${SITE_DESCRIPTION} #opensourcedatastack`;
 export const COOKIE = 'user-id';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
