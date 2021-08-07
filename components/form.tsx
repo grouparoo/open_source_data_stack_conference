@@ -24,6 +24,7 @@ import styleUtils from './utils.module.css';
 import styles from './form.module.css';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
 import { register } from '@lib/user-api';
+import { analyticsRegistration } from './analytics';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -80,6 +81,8 @@ export default function Form({ sharePage }: Props) {
                 throw new FormError(res);
               }
 
+              analyticsRegistration();
+
               const data = await res.json();
               const params = {
                 id: data.id,
@@ -97,6 +100,7 @@ export default function Form({ sharePage }: Props) {
                       )}`
                   )
                   .join('&');
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
                 router.replace(`/?${queryString}`, '/');
               } else {
                 setUserData(params);
