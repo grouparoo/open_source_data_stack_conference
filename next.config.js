@@ -15,6 +15,9 @@
  */
 
 module.exports = {
+  env: {
+    GOOGLE_ANALYTICS_TRACKING_ID: process.env.GOOGLE_ANALYTICS_TRACKING_ID
+  },
   images: {
     domains: [
       'www.datocms-assets.com',

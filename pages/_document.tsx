@@ -15,12 +15,15 @@
  */
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { AnalyticsHead } from '@components/analytics';
 
 export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <AnalyticsHead />
+        </Head>
         <body className="loading">
           <Main />
           <NextScript />

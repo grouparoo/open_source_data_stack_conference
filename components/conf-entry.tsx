@@ -23,6 +23,7 @@ import { register } from '@lib/user-api';
 import { SITE_DESCRIPTION } from '@lib/constants';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
 import { CODE_OF_CONDUCT } from '@lib/constants';
+import { analyticsRegistration } from './analytics';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -46,6 +47,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
   const onSubmit = useCallback(
     async e => {
       try {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         e.preventDefault();
         setFormState('loading');
 
@@ -57,7 +59,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
           setFormState('error');
           return;
         }
-
+        analyticsRegistration();
         onRegister();
       } catch (err) {
         console.error(err);
@@ -71,6 +73,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
   useEmailQueryParam('login', setEmailInput);
 
   const onTryAgainClick = useCallback(e => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     e.preventDefault();
     setErrorMsg('');
     setFormState('default');

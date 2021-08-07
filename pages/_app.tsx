@@ -22,11 +22,23 @@ import type { AppProps } from 'next/app';
 import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { analyticsPageView } from '@components/analytics';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   useEffect(() => {
     document.body.classList?.remove('loading');
-  }, []);
+
+    const handleRouteChange = (url: string) => {
+      analyticsPageView(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <SSRProvider>
       <OverlayProvider>
