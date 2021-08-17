@@ -20,13 +20,24 @@ import styles from './schedule.module.css';
 import TalkCard from './talk-card';
 import { scheduleForStage } from '@lib/schedule';
 
+function getTimezone() {
+  return new Date()
+    .toLocaleDateString(undefined, { day: '2-digit', timeZoneName: 'long' })
+    .substring(4);
+}
+
 function StageRow({ stage }: { stage: Stage }) {
   const talks = scheduleForStage(stage);
   return (
     <div key={stage.name} className={styles.row}>
-      <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
-        <span>{stage.name}</span>
-      </h3>
+      <div>
+        <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
+          <span>{stage.name}</span>
+        </h3>
+        <p className={cn(styles['stage-zone'])}>
+          Times are in your local timezone ({getTimezone()})
+        </p>
+      </div>
       <div className={cn(styles.talks, styles[stage.slug])}>
         {talks.map((talk: Talk) => (
           <div key={['div', talk.title, talk.start].join(',')}>

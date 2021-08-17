@@ -27,6 +27,12 @@ type Props = {
   allStages: Stage[];
 };
 
+function getTimezone() {
+  return new Date()
+    .toLocaleDateString(undefined, { day: '2-digit', timeZoneName: 'long' })
+    .substring(4);
+}
+
 export default function ScheduleSidebar({ allStages }: Props) {
   const router = useRouter();
   const [currentStageSlug, setCurrentStageSlug] = useState(router.query.slug);
@@ -39,7 +45,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
   return (
     <div className={styles.schedule}>
       <h3 className={styles.header}>Schedule</h3>
-      <p>{SHORT_DATE}</p>
+      <p>{getTimezone()}</p>
       <Select
         aria-label="Select a stage"
         value={currentStageSlug}

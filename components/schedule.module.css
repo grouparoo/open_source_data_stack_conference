@@ -49,6 +49,10 @@
   color: var(--brand);
 }
 
+.stage-zone {
+  color: var(--secondary-color);
+}
+
 .talks {
   display: flex;
   flex-direction: row;
@@ -81,6 +85,13 @@
 
   .stage-name {
     font-size: var(--space-8x);
+    position: sticky;
+    left: 0;
+    padding-left: var(--space-8x);
+    z-index: 1;
+  }
+
+  .stage-zone {
     position: sticky;
     left: 0;
     padding-left: var(--space-8x);
