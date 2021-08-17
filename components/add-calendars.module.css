@@ -1,0 +1,19 @@
+.container {
+  margin-left: 10px;
+}
+.cta {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0px;
+}
+.buttons {
+  margin: 0px;
+}
+.buttonLink {
+  display: inline;
+}
+.buttonImage {
+  width: 45px;
+  display: inline;
+}

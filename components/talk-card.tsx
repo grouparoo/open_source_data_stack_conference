@@ -19,6 +19,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { parseISO, format, isBefore, isAfter } from 'date-fns';
+import AddCalendarIcon from './icons/icon-add-calendar';
 import { Talk } from '@lib/types';
 import styles from './talk-card.module.css';
 
@@ -33,7 +34,10 @@ const formatDate = (date: string) => {
   return format(parseISO(date), "E h:mmaaaaa'm'");
 };
 
-export default function TalkCard({ talk: { title, speaker, start, end }, showTime }: Props) {
+export default function TalkCard({
+  talk: { title, speaker, start, end, addeventId },
+  showTime
+}: Props) {
   const [isTalkLive, setIsTalkLive] = useState(false);
   const [startAndEndTime, setStartAndEndTime] = useState('');
 
@@ -55,6 +59,11 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
           })}
         >
           <div className={styles['card-body']}>
+            {addeventId && (
+              <div className={styles['add-calendar']}>
+                <AddCalendarIcon />
+              </div>
+            )}
             <h4 title={title} className={styles.title}>
               {title}
             </h4>

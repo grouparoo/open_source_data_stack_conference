@@ -18,6 +18,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
+import AddCalendars from '@components/add-calendars';
 import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
 
@@ -113,6 +114,7 @@ export default function SpeakerSection({ speaker }: Props) {
         <div className={styles['talk-details']}>
           <h3 className={styles['socials-header']}>{speaker.talk.title}</h3>
           <p>{speaker.talk.description}</p>
+          <AddCalendars addeventId={speaker.talk.addeventId} />
         </div>
       )}
     </>
