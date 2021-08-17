@@ -23,6 +23,11 @@
 - Add jobs
 - Switch out videos for the talks
 
+## Credits
+
+- Logo from [here](https://boxicons.com/?query=analyse)
+- Calendar icon from [here](https://boxicons.com/?query=calendar+plus)
+
 # [Original Readme](https://vercel.com/virtual-event-starter-kit)
 
 ### Demo: https://demo.vercel.events
