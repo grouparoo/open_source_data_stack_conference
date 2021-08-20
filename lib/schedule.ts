@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /**
  * Copyright 2020 Vercel Inc.
  *
@@ -15,6 +16,7 @@
  */
 
 import { Stage, Talk } from '@lib/types';
+import { format, parseISO } from 'date-fns';
 
 export function scheduleForStage(stage: Stage | undefined): Talk[] {
   // Group talks by the time block
@@ -23,7 +25,9 @@ export function scheduleForStage(stage: Stage | undefined): Talk[] {
     return [];
   }
   const timeBlocks = schedule.reduce((allBlocks: any, talk) => {
-    allBlocks[new Date(talk.start).getTime()] = [...(allBlocks[talk.start] || []), talk];
+    const date = parseISO(talk.start);
+    const talkKey = date.getTime();
+    allBlocks[talkKey] = [...(allBlocks[talkKey] || []), talk];
     return allBlocks;
   }, {});
   let out: Talk[] = [];
@@ -34,4 +38,35 @@ export function scheduleForStage(stage: Stage | undefined): Talk[] {
       out = out.concat(timeBlocks[key]);
     });
   return out;
+}
+
+export function scheduleForStageDays(stage: Stage | undefined): Talk[][] {
+  // Group talks by the day and time block
+  const schedule = stage?.schedule;
+  if (!schedule) {
+    return [];
+  }
+  const dayBlocks = schedule.reduce((allBlocks: any, talk) => {
+    const date = parseISO(talk.start);
+    const dateKey = format(date, 'yyyyMMdd');
+    const talkKey = date.getTime();
+    allBlocks[dateKey] = allBlocks[dateKey] || [];
+    allBlocks[dateKey][talkKey] = [...(allBlocks[dateKey][talkKey] || []), talk];
+    return allBlocks;
+  }, {});
+  const days: Talk[][] = [];
+
+  Object.keys(dayBlocks)
+    .sort()
+    .forEach(dKey => {
+      const timeBlocks = dayBlocks[dKey];
+      let out: Talk[] = [];
+      Object.keys(timeBlocks)
+        .sort()
+        .forEach(tKey => {
+          out = out.concat(timeBlocks[tKey]);
+        });
+      days.push(out);
+    });
+  return days;
 }

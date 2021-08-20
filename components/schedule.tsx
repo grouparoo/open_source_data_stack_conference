@@ -18,7 +18,7 @@ import cn from 'classnames';
 import { Stage, Talk } from '@lib/types';
 import styles from './schedule.module.css';
 import TalkCard from './talk-card';
-import { scheduleForStage } from '@lib/schedule';
+import { scheduleForStageDays } from '@lib/schedule';
 
 function getTimezone() {
   return new Date()
@@ -27,7 +27,7 @@ function getTimezone() {
 }
 
 function StageRow({ stage }: { stage: Stage }) {
-  const talks = scheduleForStage(stage);
+  const dayTalks = scheduleForStageDays(stage);
   return (
     <div key={stage.name} className={styles.row}>
       <div>
@@ -38,10 +38,14 @@ function StageRow({ stage }: { stage: Stage }) {
           Times are in your local timezone ({getTimezone()})
         </p>
       </div>
-      <div className={cn(styles.talks, styles[stage.slug])}>
-        {talks.map((talk: Talk) => (
-          <div key={['div', talk.title, talk.start].join(',')}>
-            <TalkCard key={['card', talk.title, talk.start].join(',')} talk={talk} showTime />
+      <div className={cn(styles.days, styles[stage.slug])}>
+        {dayTalks.map((talks: Talk[]) => (
+          <div className={cn(styles.talks, styles[stage.slug])}>
+            {talks.map((talk: Talk) => (
+              <div key={['div', talk.title, talk.start].join(',')}>
+                <TalkCard key={['card', talk.title, talk.start].join(',')} talk={talk} showTime />
+              </div>
+            ))}
           </div>
         ))}
       </div>
