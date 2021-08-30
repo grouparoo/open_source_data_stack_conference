@@ -4,3 +4,7 @@
   margin-bottom: var(--space-12x);
   padding-top: 20px;
 }
+
+.image {
+  border-radius: var(--space-2x);
+}
