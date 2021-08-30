@@ -1,0 +1,6 @@
+.pipeline {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: var(--space-12x);
+  padding-top: 20px;
+}
