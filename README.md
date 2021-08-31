@@ -16,10 +16,6 @@
 
 ## TODO
 
-- Make a better image of the stack for use on site
-- Update twitter-card.png
-- Add page for stack or add to homepage
-- Set videos for companies
 - Add jobs
 - Switch out videos for the talks
 
