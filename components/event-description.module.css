@@ -1,0 +1,13 @@
+.container {
+  max-width: 800px;
+  color: var(--secondary-color);
+  margin-bottom: var(--space-12x);
+  margin: auto auto 30px;
+}
+
+.header {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #fff;
+}
