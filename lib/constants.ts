@@ -52,7 +52,7 @@ export const NAVIGATION = [
     route: '/speakers'
   },
   {
-    name: 'Tools',
+    name: 'Partners',
     route: '/expo'
   }
 ];
