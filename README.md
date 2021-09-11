@@ -16,7 +16,7 @@
 
 ## TODO
 
-- Add jobs
+- put up stage
 - Switch out videos for the talks
 
 ## Credits
