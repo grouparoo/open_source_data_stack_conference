@@ -16,6 +16,7 @@
 
 ## TODO
 
+- record talks
 - put up stage
 - Switch out videos for the talks
 
