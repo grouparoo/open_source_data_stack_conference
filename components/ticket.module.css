@@ -165,3 +165,6 @@
     padding: 0 40px;
   }
 }
+.stage {
+  max-width: 400px;
+}

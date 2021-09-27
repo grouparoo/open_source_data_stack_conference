@@ -22,6 +22,7 @@ import { TicketGenerationState } from '@lib/constants';
 import isMobileOrTablet from '@lib/is-mobile-or-tablet';
 import { scrollTo } from '@lib/smooth-scroll';
 import styles from './ticket.module.css';
+import formStyles from './form.module.css';
 import styleUtils from './utils.module.css';
 import TicketForm from './ticket-form';
 import TicketVisual from './ticket-visual';
@@ -36,6 +37,24 @@ type Props = {
   name: UserData['name'];
   sharePage?: boolean;
 };
+
+function ongoingStage() {
+  const now = Date.now();
+
+  const monStart = Date.parse('Mon Sep 28 2021 08:46:00 GMT-0700 (Pacific Daylight Time)');
+  const monEnd = Date.parse('Mon Sep 28 2021 11:00:00 GMT-0700 (Pacific Daylight Time)');
+
+  const tuesStart = Date.parse('Tues Sep 29 2021 08:46:00 GMT-0700 (Pacific Daylight Time)');
+  const tuesEnd = Date.parse('Tues Sep 29 2021 11:00:00 GMT-0700 (Pacific Daylight Time)');
+
+  const wedStart = Date.parse('Tues Sep 30 2021 08:46:00 GMT-0700 (Pacific Daylight Time)');
+  const wedEnd = Date.parse('Tues Sep 30 2021 10:30:00 GMT-0700 (Pacific Daylight Time)');
+
+  if (now >= monStart && now <= monEnd) return true;
+  if (now >= tuesStart && now <= tuesEnd) return true;
+  if (now >= wedStart && now <= wedEnd) return true;
+  return false;
+}
 
 export default function Ticket({ username, name, ticketNumber, sharePage }: Props) {
   const ticketRef = useRef<HTMLDivElement>(null);
@@ -61,6 +80,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
     }
   }, [divRef, sharePage]);
 
+  const showStage = ongoingStage();
+
   return (
     <div
       className={cn(styles['ticket-layout'], {
@@ -76,6 +97,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               ) : (
                 <>{SITE_NAME}</>
               )
+            ) : showStage ? (
+              <>Welcome.</>
             ) : (
               <>
                 You're in. <br /> Make it unique.
@@ -87,6 +110,11 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               <>
                 Join {name ?? 'them'} on {DATE}.
               </>
+            ) : showStage ? (
+              <>
+                Come on in. <br />
+                We are glad you are here.
+              </>
             ) : (
               <>
                 Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
@@ -97,10 +125,20 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
         </div>
         <div className={cn(styleUtils.appear, styleUtils['appear-third'])}>
           {!sharePage ? (
-            <TicketForm
-              defaultUsername={username}
-              setTicketGenerationState={setTicketGenerationState}
-            />
+            showStage ? (
+              <a
+                href="/stage/events"
+                type="button"
+                className={cn(formStyles.submit, styles['stage'])}
+              >
+                Go to the stage
+              </a>
+            ) : (
+              <TicketForm
+                defaultUsername={username}
+                setTicketGenerationState={setTicketGenerationState}
+              />
+            )
           ) : (
             <Form sharePage />
           )}
