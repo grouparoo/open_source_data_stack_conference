@@ -39,10 +39,10 @@ export const CODE_OF_CONDUCT = 'https://www.opensourcedatastack.com/OSDSConfCode
 export const REPO = 'https://github.com/grouparoo/open_source_data_stack_conference';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
-  // {
-  //   name: 'Stage',
-  //   route: '/stage/events'
-  // },
+  {
+    name: 'Stage',
+    route: '/stage/events'
+  },
   {
     name: 'Schedule',
     route: '/schedule'
