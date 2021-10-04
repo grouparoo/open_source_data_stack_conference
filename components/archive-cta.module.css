@@ -1,0 +1,9 @@
+.button {
+  max-width: 400px;
+}
+
+.contact {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: var(--space-12x);
+}
