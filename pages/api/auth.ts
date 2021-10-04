@@ -15,10 +15,14 @@
  */
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { COOKIE } from '@lib/constants';
+import { COOKIE, ARCHIVE } from '@lib/constants';
 import redis from '@lib/redis';
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
+  if (ARCHIVE) {
+    return res.status(200).json({ loggedIn: true });
+  }
+
   const id = req.cookies[COOKIE];
   if (!id) {
     return res.status(401).json({

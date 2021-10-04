@@ -15,11 +15,15 @@
  */
 
 import useSWR, { ConfigInterface } from 'swr';
+import { ARCHIVE } from '@lib/constants';
 
 export default function useLoginStatus(opts?: ConfigInterface) {
   const { data, error, mutate } = useSWR(
     `/api/auth`,
     async url => {
+      if (ARCHIVE) {
+        return { loggedIn: true };
+      }
       const res = await fetch(url);
       if (!res.ok) {
         throw new Error();
