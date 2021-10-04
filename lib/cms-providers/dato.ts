@@ -56,6 +56,7 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
           title
           description
           addeventId
+          youtubeSlug
         }
         image {
           url(imgixParams: {fm: jpg, fit: crop, w: 300, h: 400})
@@ -83,6 +84,7 @@ export async function getAllStages(): Promise<Stage[]> {
           start
           end
           addeventId
+          youtubeSlug
           speaker {
             name
             slug

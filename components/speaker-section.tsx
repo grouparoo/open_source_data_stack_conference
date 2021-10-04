@@ -21,6 +21,7 @@ import GithubIcon from '@components/icons/icon-github';
 import AddCalendars from '@components/add-calendars';
 import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
+import { ARCHIVE } from '@lib/constants';
 
 const TwitterIcon = () => (
   <svg width={24} viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -56,6 +57,20 @@ export default function SpeakerSection({ speaker }: Props) {
           Back to speakers
         </a>
       </Link>
+      {ARCHIVE && speaker?.talk?.youtubeSlug && (
+        <div key={speaker.name + '-video'} className={styles.replay}>
+          <iframe
+            className={cn(styles.video)}
+            allow="picture-in-picture"
+            allowFullScreen
+            frameBorder="0"
+            height="100%"
+            src={`https://youtube.com/embed/${speaker.talk.youtubeSlug}`}
+            title={speaker.talk.title}
+            width="100%"
+          />
+        </div>
+      )}
       <div key={speaker.name} className={styles.container}>
         <div style={{ minWidth: '300px' }}>
           <Image

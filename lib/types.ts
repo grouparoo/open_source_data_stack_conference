@@ -46,6 +46,7 @@ export type Talk = {
   end: string;
   speaker: Speaker[];
   addeventId: string;
+  youtubeSlug: string;
 };
 
 export type Link = {

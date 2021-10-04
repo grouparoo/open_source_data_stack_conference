@@ -22,8 +22,10 @@ import ConfContainer from './conf-container';
 import Hero from './hero';
 import Form from './form';
 import LearnMore from './learn-more';
+import ArchiveCta from './archive-cta';
 import Pipeline from './pipeline';
 import EventDescription from './event-description';
+import { ARCHIVE } from '../lib/constants';
 
 type Props = {
   defaultUserData: UserData;
@@ -52,8 +54,9 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
-              <Form />
-              <LearnMore />
+              {!ARCHIVE && <Form />}
+              {!ARCHIVE && <LearnMore />}
+              {ARCHIVE && <ArchiveCta />}
               <Pipeline />
               <EventDescription />
             </>

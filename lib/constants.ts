@@ -24,7 +24,7 @@ export const META_TITLE = SITE_NAME;
 export const META_DESCRIPTION =
   'Building the modern stack with open source data solutions | Sept. 28 - 30';
 export const SITE_DESCRIPTION = 'Building the modern stack with open source data solutions.';
-export const DATE = 'Sept. 28 - 30';
+export const DATE = 'Sept. 28 - 30 2021';
 export const SHORT_DATE = 'Sept. 28 - 30';
 export const FULL_DATE = SHORT_DATE; // not used?
 export const TWEET_TEXT = `${SITE_DESCRIPTION} #opensourcedatastackconference`;
@@ -35,18 +35,21 @@ export const COOKIE = 'user-id';
 export const LEGAL_URL = ''; // 'https://legalurl';
 export const COPYRIGHT_HOLDER = null;
 
+// the conference is over. until next year...
+export const ARCHIVE = true;
+
 export const CODE_OF_CONDUCT = 'https://www.opensourcedatastack.com/OSDSConfCodeofConduct.html';
 export const REPO = 'https://github.com/grouparoo/open_source_data_stack_conference';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Stage',
+    name: ARCHIVE ? 'Replay' : 'Stage',
     route: '/stage/events'
   },
-  {
-    name: 'Schedule',
-    route: '/schedule'
-  },
+  // {
+  //   name: 'Schedule',
+  //   route: '/schedule'
+  // },
   {
     name: 'Speakers',
     route: '/speakers'

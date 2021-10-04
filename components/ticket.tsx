@@ -28,7 +28,7 @@ import TicketForm from './ticket-form';
 import TicketVisual from './ticket-visual';
 import TicketActions from './ticket-actions';
 import TicketCopy from './ticket-copy';
-import { DATE, SITE_NAME } from '@lib/constants';
+import { DATE, SITE_NAME, ARCHIVE } from '@lib/constants';
 import Form from './form';
 
 type Props = {
@@ -39,6 +39,9 @@ type Props = {
 };
 
 function ongoingStage() {
+  if (ARCHIVE) {
+    return true;
+  }
   const now = Date.now();
 
   const monStart = Date.parse('Mon Sep 28 2021 08:46:00 GMT-0700 (Pacific Daylight Time)');
