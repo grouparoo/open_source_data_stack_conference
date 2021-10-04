@@ -24,7 +24,7 @@ export const META_TITLE = SITE_NAME;
 export const META_DESCRIPTION =
   'Building the modern stack with open source data solutions | Sept. 28 - 30';
 export const SITE_DESCRIPTION = 'Building the modern stack with open source data solutions.';
-export const DATE = 'Sept. 28 - 30';
+export const DATE = 'Sept. 28 - 30 2021';
 export const SHORT_DATE = 'Sept. 28 - 30';
 export const FULL_DATE = SHORT_DATE; // not used?
 export const TWEET_TEXT = `${SITE_DESCRIPTION} #opensourcedatastackconference`;
@@ -46,14 +46,14 @@ export const NAVIGATION = [
     name: ARCHIVE ? 'Replay' : 'Stage',
     route: '/stage/events'
   },
-  {
-    name: ARCHIVE ? 'Talks' : 'Schedule',
-    route: '/schedule'
-  },
   // {
-  //   name: 'Speakers',
-  //   route: '/speakers'
+  //   name: 'Schedule',
+  //   route: '/schedule'
   // },
+  {
+    name: 'Speakers',
+    route: '/speakers'
+  },
   {
     name: 'Partners',
     route: '/expo'
