@@ -16,8 +16,7 @@
 
 ## TODO
 
-- record talks
-- put up stag
+- Plan for next year
 
 ## Credits
 
