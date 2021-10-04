@@ -127,3 +127,18 @@
 .githubIcon {
   margin-left: var(--space-2x);
 }
+
+.replay {
+  width: 100%;
+  min-height: 500px;
+  max-height: 300px;
+  max-width: 900px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+}
