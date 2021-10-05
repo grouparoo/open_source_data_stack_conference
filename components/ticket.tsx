@@ -154,35 +154,37 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
           )}
         </div>
       </div>
-      <div className={styles['ticket-visual-wrapper']}>
-        <div
-          ref={ticketRef}
-          className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
-        >
-          <TicketVisual
-            username={username}
-            name={name}
-            ticketNumber={ticketNumber}
-            ticketGenerationState={ticketGenerationState}
-          />
+      {!ARCHIVE && (
+        <div className={styles['ticket-visual-wrapper']}>
+          <div
+            ref={ticketRef}
+            className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
+          >
+            <TicketVisual
+              username={username}
+              name={name}
+              ticketNumber={ticketNumber}
+              ticketGenerationState={ticketGenerationState}
+            />
+          </div>
+          {!sharePage && (
+            <>
+              {username ? (
+                <div>
+                  <div className={styles['ticket-actions']}>
+                    <TicketActions username={username} />
+                  </div>
+                  <div className={styles['ticket-copy']}>
+                    <TicketCopy username={username} />
+                  </div>
+                </div>
+              ) : (
+                <div className={styles['ticket-actions-placeholder']} />
+              )}
+            </>
+          )}
         </div>
-        {!sharePage && (
-          <>
-            {username ? (
-              <div>
-                <div className={styles['ticket-actions']}>
-                  <TicketActions username={username} />
-                </div>
-                <div className={styles['ticket-copy']}>
-                  <TicketCopy username={username} />
-                </div>
-              </div>
-            ) : (
-              <div className={styles['ticket-actions-placeholder']} />
-            )}
-          </>
-        )}
-      </div>
+      )}
     </div>
   );
 }
