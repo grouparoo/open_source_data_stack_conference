@@ -22,10 +22,15 @@ import formStyles from './form.module.css';
 export default function ArchiveCta() {
   // copy here to learn more or put below the hero if necessary.
   return (
-    <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.contact)}>
-      <a href="/stage/events" type="button" className={cn(formStyles.submit, styles.button)}>
-        See the replay
-      </a>
-    </div>
+    <>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.container)}>
+        <a href="/stage/events" type="button" className={cn(formStyles.submit, styles.button)}>
+          See the replay
+        </a>
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.year)}>
+        See you next year
+      </div>
+    </>
   );
 }

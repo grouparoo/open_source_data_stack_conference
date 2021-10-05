@@ -54,9 +54,9 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
-              {!ARCHIVE && <Form />}
-              {!ARCHIVE && <LearnMore />}
               {ARCHIVE && <ArchiveCta />}
+              <Form />
+              <LearnMore />
               <Pipeline />
               <EventDescription />
             </>

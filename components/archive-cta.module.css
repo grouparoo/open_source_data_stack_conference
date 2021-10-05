@@ -2,8 +2,17 @@
   max-width: 400px;
 }
 
-.contact {
+.container {
   text-align: center;
   color: var(--secondary-color);
-  margin-bottom: var(--space-12x);
+  margin-bottom: var(--space-32x);
+}
+
+.year {
+  text-align: center;
+  font-size: var(--space-8x);
+  line-height: 1.4;
+  font-weight: 400;
+  padding-top: var(--space-16x);
+  margin-bottom: var(--space-4x);
 }

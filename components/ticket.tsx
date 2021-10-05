@@ -100,6 +100,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               ) : (
                 <>{SITE_NAME}</>
               )
+            ) : ARCHIVE ? (
+              <>See you then.</>
             ) : showStage ? (
               <>Welcome.</>
             ) : (
@@ -112,6 +114,11 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
             {sharePage ? (
               <>
                 Join {name ?? 'them'} on {DATE}.
+              </>
+            ) : ARCHIVE ? (
+              <>
+                We will let you know. <br />
+                For now, want to watch something?
               </>
             ) : showStage ? (
               <>
@@ -134,7 +141,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
                 type="button"
                 className={cn(formStyles.submit, styles['stage'])}
               >
-                Go to the stage
+                {ARCHIVE ? 'See the replay' : 'Go to the stage'}
               </a>
             ) : (
               <TicketForm
