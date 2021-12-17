@@ -42,21 +42,29 @@ export const REPO = 'https://github.com/grouparoo/open_source_data_stack_confere
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: ARCHIVE ? 'Replay' : 'Stage',
-    route: '/stage/events'
+    name: 'Next Event',
+    route: '/?event'
   },
+  {
+    name: '2021 Conference',
+    route: '/conference'
+  }
+  // {
+  //   name: ARCHIVE ? 'Replay' : 'Stage',
+  //   route: '/stage/events'
+  // }
   // {
   //   name: 'Schedule',
   //   route: '/schedule'
   // },
-  {
-    name: 'Speakers',
-    route: '/speakers'
-  },
-  {
-    name: 'Partners',
-    route: '/expo'
-  }
+  // {
+  //   name: 'Speakers',
+  //   route: '/speakers'
+  // },
+  // {
+  //   name: 'Partners',
+  //   route: '/expo'
+  // }
 ];
 
 export type TicketGenerationState = 'default' | 'loading';
