@@ -19,15 +19,14 @@ export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_U
 export const TWITTER_USER_NAME = null; // 'twitterusername';
 export const BRAND_NAME = 'Open Source Data Stack';
 export const SITE_NAME_MULTILINE = ['Open Source', 'Data Stack'];
-export const SITE_NAME = 'Open Source Data Stack Conference';
+export const SITE_NAME = 'Open Source Data Stack';
 export const META_TITLE = SITE_NAME;
-export const META_DESCRIPTION =
-  'Building the modern stack with open source data solutions | Sept. 28 - 30';
+export const META_DESCRIPTION = 'Building the modern stack with open source data solutions.';
 export const SITE_DESCRIPTION = 'Building the modern stack with open source data solutions.';
 export const DATE = 'Sept. 28 - 30 2021';
 export const SHORT_DATE = 'Sept. 28 - 30';
 export const FULL_DATE = SHORT_DATE; // not used?
-export const TWEET_TEXT = `${SITE_DESCRIPTION} #opensourcedatastackconference`;
+export const TWEET_TEXT = `${SITE_DESCRIPTION} #opensourcedatastack`;
 export const COOKIE = 'user-id';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with

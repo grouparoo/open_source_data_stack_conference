@@ -1,6 +1,6 @@
 {
-  "name": "Open Source Data Stack Conference",
-  "description": "Building the modern stack with open source data solutions | Sept. 28 - 30",
+  "name": "Open Source Data Stack",
+  "description": "Building the modern stack with open source data solutions",
   "previewImage": "https://www.opensourcedatastack.com/twitter-card.png",
   "datocmsProjectId": "37685",
   "deploymentType": "vercel",
