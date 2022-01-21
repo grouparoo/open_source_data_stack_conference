@@ -7,13 +7,12 @@ import heroStyles from './hero.module.css';
 import descStyles from './event-description.module.css';
 import formStyles from './form.module.css';
 import archiveStyles from './archive-cta.module.css';
-import { BRAND_NAME } from '@lib/constants';
 
 // details of the event
-const EVENT_DATE = 'Jan. 28, 2021 6pm PST';
-const EVENT_TITLE = 'Data Stacks For Fun & Nonprofit';
-const EVENT_PRESENTER = 'Andrew Stewart';
-const EVENT_LINK = 'https://www.zoom.com/';
+const EVENT_DATE = 'Feb. 16, 2022 10am PST';
+const EVENT_TITLE = 'Tapestry Data Pipeline Case Study';
+const EVENT_PRESENTER = 'Katherine Beck, Leah Garrison, and Adam Peterson';
+const EVENT_LINK = 'https://us02web.zoom.us/webinar/register/WN_YGY7eaTFSdOcBbgSMpP6-Q';
 
 export default function Event() {
   return (
@@ -28,22 +27,6 @@ export default function Event() {
     </Layout>
   );
 }
-
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 function Hero() {
   return (
@@ -99,32 +82,21 @@ function EventDescription() {
     <div className={cn(styleUtils.appear, styleUtils['appear-sixth'], descStyles.container)}>
       <h3 className={cn(descStyles.header)}>About the Event</h3>
       <p>
-        The emergence of the modern data stack has seen a rapid spike in the number of data tools an
-        organization can use to drive better decision making. Each tool has become highly
-        specialized in its portion of the data lifecycle, plus tools that are open source are a
-        powerful way for technology buyers to reduce exposure to vendor lock-in.
+        The Open Source Data Stack Conference is excited to invite you to its first community event.
+        We’d like to experiment with shorter, focused events in between our major, likely annual
+        conferences.
       </p>
       <p>
-        Open-source software helps you to control the end-to-end flow of customer data throughout
-        your organization:
-      </p>
-      <ul>
-        <li>To guarantee data auditability</li>
-        <li>To allow data governance</li>
-        <li>To support consumer data privacy</li>
-        <li>To enable productive engineer workflows</li>
-      </ul>
-      <p>
-        By taking ownership and control over your data pipeline through open source, you can reduce
-        the “trust surface area” for your customer data.
-      </p>
-      <p>
-        Join us at the first ever conference dedicated to building a modern data stack using open
-        source data solutions.
-      </p>
-      <p>
-        We are bringing together the building blocks of the open source data stack to demonstrate
-        how teams can build a data stack that reflects their needs.
+        For our first event, the team behind the{' '}
+        <a
+          href="https://tapestry-pipeline.github.io/case-study"
+          target="_blank"
+          style={{ textDecoration: 'underline' }}
+        >
+          Tapestry Pipeline
+        </a>{' '}
+        will be presenting their case study. Tapestry is an open-source orchestration framework for
+        the deployment of user entity data pipelines.
       </p>
     </div>
   );
