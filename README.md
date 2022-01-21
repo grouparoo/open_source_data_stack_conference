@@ -1,4 +1,4 @@
-# Open Source Data Stack Conference
+# Open Source Data Stack
 
 ## Get Started
 

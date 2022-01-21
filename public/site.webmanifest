@@ -1,7 +1,7 @@
 {
-  "name": "Open Source Data Stack Conference",
-  "short_name": "Open Source Data Stack Conference",
-  "description": "Building the modern stack with open source data solutions | Sept. 28 - 30",
+  "name": "Open Source Data Stack",
+  "short_name": "Open Source Data Stack",
+  "description": "Building the modern stack with open source data solutions.",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
