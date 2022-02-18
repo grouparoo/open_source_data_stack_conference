@@ -12,7 +12,7 @@ import archiveStyles from './archive-cta.module.css';
 const EVENT_DATE = 'Feb. 16, 2022 10am PST';
 const EVENT_TITLE = 'Tapestry Data Pipeline Case Study';
 const EVENT_PRESENTER = 'Katherine Beck, Leah Garrison, and Adam Peterson';
-const EVENT_LINK = 'https://us02web.zoom.us/webinar/register/WN_YGY7eaTFSdOcBbgSMpP6-Q';
+const EVENT_LINK = 'https://www.youtube.com/watch?v=3j-n896EY_I';
 
 export default function Event() {
   return (
@@ -71,7 +71,7 @@ function Cta() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], archiveStyles.container)}>
       <a href={EVENT_LINK} type="button" className={cn(formStyles.submit, archiveStyles.button)}>
-        Register now
+        Watch the replay
       </a>
     </div>
   );
