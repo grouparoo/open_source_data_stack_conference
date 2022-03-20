@@ -12,7 +12,7 @@ import archiveStyles from './archive-cta.module.css';
 const EVENT_DATE = 'Feb. 16, 2022 10am PST';
 const EVENT_TITLE = 'Tapestry Data Pipeline Case Study';
 const EVENT_PRESENTER = 'Katherine Beck, Leah Garrison, and Adam Peterson';
-const EVENT_LINK = 'https://www.youtube.com/watch?v=3j-n896EY_I';
+const EVENT_LINK = 'https://www.youtube.com/watch?v=8pF5jZYYBVU';
 
 export default function Event() {
   return (
