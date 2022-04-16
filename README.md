@@ -152,6 +152,11 @@ Provision your own Redis instance and set `REDIS_PORT`, `REDIS_URL`, `REDIS_PASS
 
 If you do not want to maintain a Redis server, you can use [Upstash](https://upstash.com) which provides Serverless Redis with a free tier.
 
+## Other Constants
+
+`ARCHIVE`: `true` if nothing specific planned for the next conference.
+`REGISTER`: `true` if currently accepting registrations.
+
 ## More Details
 
 ### Stages
