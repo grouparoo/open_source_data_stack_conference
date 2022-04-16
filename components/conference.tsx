@@ -25,7 +25,7 @@ import LearnMore from './learn-more';
 import ArchiveCta from './archive-cta';
 import Pipeline from './pipeline';
 import EventDescription from './event-description';
-import { ARCHIVE } from '../lib/constants';
+import { ARCHIVE, REGISTER } from '../lib/constants';
 
 type Props = {
   defaultUserData: UserData;
@@ -55,8 +55,8 @@ export default function Conf({
             <>
               <Hero />
               {ARCHIVE && <ArchiveCta />}
-              <Form />
-              <LearnMore />
+              {REGISTER && <Form />}
+              {REGISTER && <LearnMore />}
               <Pipeline />
               <EventDescription />
             </>
