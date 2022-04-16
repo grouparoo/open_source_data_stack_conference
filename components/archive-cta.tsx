@@ -18,6 +18,7 @@ import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './archive-cta.module.css';
 import formStyles from './form.module.css';
+import { REGISTER } from '../lib/constants';
 
 export default function ArchiveCta() {
   // copy here to learn more or put below the hero if necessary.
@@ -28,9 +29,11 @@ export default function ArchiveCta() {
           See the replay
         </a>
       </div>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.year)}>
-        See you next year
-      </div>
+      {REGISTER && (
+        <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.year)}>
+          See you next year
+        </div>
+      )}
     </>
   );
 }
